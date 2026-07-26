@@ -1,22 +1,31 @@
 %------------------------ Preamble and bibliography resources
 \documentclass[12pt,oneside]{book}
 \input{frontmatter/preamble} 
-\usepackage{style/title}[PhD]
+\usepackage{style/title}[Honours]
+\usepackage[explicit,compact]{titlesec}
+% \usepackage[a4paper, margin=0.5in]{geometry}
+\titlespacing*{\chapter}
+{0pt}      % left indentation
+{-40pt}    % space before the chapter title
+{20pt}     % space after the chapter title
+
+\titleformat{\chapter}[block]
+    {\bfseries\huge}{\filright\huge Chapter \thechapter:}{1ex}{\huge\filright #1}
 
 %\makenomenclature
 
 % Add your bibtex file here
-%\addbibresource{library.bib}
+\addbibresource{bibliography.bib}
 
 %------------------------ Main Document --------------------------
 \begin{document}
 	
 	%-------------- Information For The Title Page
-	\title{A cool sounding title goes here}
-	\author{Mr. Author}
-	\date{2018} 
-	\degree{Doctor of Philosophy (PhD)} 
-	\supervisor[1]{Dr. Doctor} % For multiple supervisors, \supervisor[2]{Supervisor 1 & 2}
+	\title{Stochastic dual-scale dynamics of visual inference}
+	\author{Jude Luca Metcalf}
+	\date{2026} 
+	\degree{Bachelor of Science (Honours)} 
+	\supervisor[1]{Prof. Pulin Gong} % For multiple supervisors, \supervisor[2]{Supervisor 1 & 2}
 	\school{Physics}
 	
 	%-------------- Front Matter
@@ -43,17 +52,18 @@
 	\cleardoublepage
 	\mainmatter
 	\include{chapters/chapter1}
-	\include{chapters/chapter2}
+	% \include{chapters/chapter2}
 	
 	%-------------- Appendices
 	\cleardoublepage
-	\appendix
-	\include{appendices/appendix1}
+	% \appendix
+	% \include{appendices/appendix1}
 	
 	%-------------- Bibliography
 	\cleardoublepage
 	\phantomsection  
-	\addcontentsline{toc}{chapter}{Bibliography}              
+	\addcontentsline{toc}{chapter}{Bibliography}  
+
 	\printbibliography
 	
 \end{document}  
