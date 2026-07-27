@@ -18,6 +18,7 @@ OPTannote = {•}
     language = {en},
     author = {Dong, Xingsi and Wu, Si},
 }
+
 @article{terada_chaotic_2024,
     title = {Chaotic neural dynamics facilitate probabilistic computations through sampling},
     volume = {121},
@@ -34,6 +35,7 @@ OPTannote = {•}
     year = {2024},
     pages = {e2312992121},
 }
+
 @article{orban_neural_2016,
     title = {Neural {Variability} and {Sampling}-{Based} {Probabilistic} {Representations} in the {Visual} {Cortex}},
     volume = {92},
@@ -50,6 +52,7 @@ OPTannote = {•}
     year = {2016},
     pages = {530--543},
 }
+
 @article{koren_efficient_2025,
     title = {Efficient coding in biophysically realistic excitatory-inhibitory spiking networks},
     volume = {13},
@@ -65,6 +68,7 @@ OPTannote = {•}
     year = {2025},
     pages = {RP99545},
 }
+
 @article{kilgore_biologically-informed_2025,
     title = {Biologically-informed excitatory and inhibitory ratio for robust spiking neural network training},
     volume = {15},
@@ -437,42 +441,6 @@ Conclusion: Saccadic eye movement changes appear to be heavily involved in the p
     issn = {0027-8424, 1091-6490},
     url = {https://pnas.org/doi/full/10.1073/pnas.1102730108},
     doi = {10.1073/pnas.1102730108},
-    abstract = {When we fixate a stationary target, our eyes generate miniature (or fixational) eye movements involuntarily. These fixational eye movements are classified as slow components (physiological drift, tremor) and microsaccades, which represent rapid, small-amplitude movements. Here we propose an integrated mathematical model for the generation of slow fixational eye movements and microsaccades. The model is based on the concept of self-avoiding random walks in a potential, a process driven by a self-generated activation field. The self-avoiding walk generates persistent movements on a short timescale, whereas, on a longer timescale, the potential produces antipersistent motions that keep the eye close to an intended fixation position. We introduce microsaccades as fast movements triggered by critical activation values. As a consequence, both slow movements and microsaccades follow the same law of motion; i.e., movements are driven by the self-generated activation field. Thus, the model contributes a unified explanation of why it has been a long-standing problem to separate slow movements and microsaccades with respect to their motion-generating principles. We conclude that the concept of a self-avoiding random walk captures fundamental properties of fixational eye movements and provides a coherent theoretical framework for two physiologically distinct movement types.
-          , 
-            Author Summary
-              Our mathematical model reproduces key statistical properties of fixational eye movements and makes specific predictions on the relationship between drift and microsaccades. Current research on the computational modeling of fixational eye movements has focused on the perceptual consequences of fixational eye movements and their neurological and physiological effects across the visual pathway (
-              2
-              ). Combining both modeling frameworks could represent an important opportunity to investigate the full feedback loop from eye-movement generation to its physiological and perceptual consequences (
-              5
-              ) and back to the motion-generating circuits. Such an approach seems promising for the development of a full theoretical understanding of visual fixation, the platform of almost all visual information processing.
-            Since the beginning of eye-movement research, finding specific functions for drift and microsaccades has been a long-standing problem. We developed a mathematical model that is able to generate both types of movements from a self-generated activation field. From this perspective, our results are compatible with the view that fixational eye movements represent a continuum of two different forms of movements produced by the same laws of motions, whereas recent research has strengthened the similarity between microsaccades and larger saccades, observed under natural viewing conditions.
-              Drift and microsaccades are dynamically coupled, because retinal image slip is reduced immediately before microsaccades (
-              4
-              ). Although our model reproduced this experimental finding, an additional prediction was obtained from numerical simulations of the model. In the model, microsaccade amplitude was negatively correlated with the amount of retinal image motion before the microsaccades. This precursory motion before microsaccades was characterized as a box-counting measure, which can be interpreted as the area crossed by the eye's trajectory in units of the retina's receptive fields (or input-sensitive regions of the individual receptors). In essence, less retinal motion induced larger microsaccade amplitudes, whereas more retinal motion led to smaller microsaccades. Such a relationship is a theoretical prediction not observed from the experimental data so far. Interestingly, analyses of experimental data confirmed our model's prediction of a negative correlation between retinal image slip and microsaccade amplitude. Thus, important experimental tests should be performed to further test the validity of the model.
-              How can we introduce microsaccades in such a model? From time to time, the potential forces the walker to visit lattice sites with high activation despite attempts to avoid these positions. We analyzed the distribution of activation values that the walker faces during the random walk. Next, we defined a critical value of activation that triggers the generation of microsaccades in the model. As an additional rule for the microsaccades, the walker was required to move immediately to the lattice site representing the global minimum of activation. This rule was based on the assumption that a microsaccade is generated whenever retinal image motion is much slower than on average. However, both microsaccades and slow movements are driven by the same self-generated activation field. Thus, the model integrates two types of movements that are physiologically characterized by differences in movement kinematics (
-              2
-              ) as well as by the resulting induced neural activity (
-              1
-              ).
-              To implement the antipersistent part of the motion into the model, we studied a self-avoiding walk in a potential. The potential represents the fact that observers have the ability to keep their eyes at an intended fixation position. In sum, the self-avoiding walk drives the eyes away from its current position, whereas the potential limits the movement excursions to a confined area. To find a right balance between persistent and antipersistent motions, the relaxation rate needs to be low. Thus, the model's statistical properties (
-                Fig. P1
-                B
-              ) are in good agreement with experimental data.
-              The concept of a self-avoiding walk (
-              Fig. P1
-              ) is directly related to the property of persistence, because the pattern of movement or trajectory only rarely intersects itself compared with Brownian motion. We implemented a version of Freund and Grassberger's Red Queen's walk (
-              3
-              ), a model motivated by the study of evolutionary equilibrium with constant change. In the self-avoiding walk, a walker moves in an activation field that is generated by its own motion. The walker moves on a lattice (discretized space), while activation is added to the lattice site at the walker's current position. Meanwhile, all other lattice sites become slowly deactivated (i.e., the activation decays at a constant relaxation rate). Finally, the walker moves according to a simple rule: It selects the lattice site of lowest activation among the nearest neighboring sites. In essence, the walker tries to avoid moving to recently visited positions; i.e., a random walk with persistence is generated.
-              The physiological and behavioral functions of fixational eye movements and microsaccades are related to induction of neural activity (
-              1
-              ) and to the statistical correlation pattern obtained from eye-movement recordings (
-              2
-              ). The motivation for our model was to propose a set of dynamical principles for the reproduction of the correlation patterns of fixational eye movements. Fixational eye movements resemble a random walk, i.e., highly erratic movements that appear similar to Brownian motion. However, a more detailed analysis of the statistical properties indicates that there is a separation of timescales in fixational eye movements. On a short timescale (up to 20 ms), fixational eye movements show a statistical tendency with positively correlated movement steps, a phenomenon known as persistence. On a longer timescale (from ∼100 ms to 400 ms), fixational eye movements show the opposite tendency, known as antipersistence (or negatively correlated movement steps).
-              Visual information processing is achieved through saccadic eye movements that move the gaze to regions of interest in the environment. However, even during visual fixation, human eyes generate the two important miniature eye movements, i.e., (
-              i
-              ) physiological drift and tremor (slow eye movements) and (
-              ii
-              ) microsaccades (rapid, small-amplitude movements). Whereas fixational eye movements in general counteract retinal fading due to fast adaptations of the receptor systems, a specific function for microsaccades remains to be identified. Here, we developed a mathematical model that provides a common principle for physiological drift and microsaccades. The model is based on the concept of a self-avoiding random walk, i.e., a stochastic motion that avoids visiting the same location more than once.},
     language = {en},
     number = {39},
     urldate = {2026-04-19},
@@ -546,18 +514,18 @@ Conclusion: Saccadic eye movement changes appear to be heavily involved in the p
 }
 
 @Inbook{Klages2013,
-author="Klages, Rainer",
-editor="Leoncini, Xavier
-and Leonetti, Marc",
-title="Weak Chaos, Infinite Ergodic Theory, and Anomalous Dynamics",
-bookTitle="From Hamiltonian Chaos to Complex Systems: A Nonlinear Physics Approach",
-year="2013",
-publisher="Springer New York",
-address="New York, NY",
-pages="3--42",
-isbn="978-1-4614-6962-9",
-doi="10.1007/978-1-4614-6962-9_1",
-url="https://doi.org/10.1007/978-1-4614-6962-9_1"
+author = {Klages, Rainer},
+editor= {Leoncini, Xavier
+and Leonetti, Marc},
+title = {Weak Chaos, Infinite Ergodic Theory, and Anomalous Dynamics},
+bookTitle = {From Hamiltonian Chaos to Complex Systems: A Nonlinear Physics Approach},
+year = {2013},
+publisher = {Springer New York},
+address = {New York, NY},
+pages = {3--42},
+isbn = {978-1-4614-6962-9},
+doi = {10.1007/978-1-4614-6962-9_1},
+url = {https://doi.org/10.1007/978-1-4614-6962-9_1},
 }
 
 @article{Brevitt2025,
@@ -591,8 +559,7 @@ bookTitle="Fluctuations of L{\'e}vy Processes with Applications: Introductory Le
 year="2014",
 publisher="Springer Berlin Heidelberg",
 address="Berlin, Heidelberg",
-pages="37--38",
-abstract="The main aim of this chapter is to establish a rigorous understanding of the structure of the paths of L{\'e}vy processes. This will be done by establishing the so-called L{\'e}vy--It{\^o} decomposition, which describes the structure of a general L{\'e}vy process in terms of three independent auxiliary L{\'e}vy processes, each with a different type of path behaviour. In doing so it will be necessary to digress temporarily into the theory of Poisson random measures and associated square-integrable martingales. Understanding the L{\'e}vy--It{\^o} decomposition will allow us to distinguish a number of important, but nonetheless general, subclasses of L{\'e}vy processes according to their path type. The chapter is concluded with a discussion of the interpretation of the L{\'e}vy--It{\^o} decomposition in the context of some of the applied probability models mentioned in Chap. 1.",
+pages="33--36",
 isbn="978-3-642-37632-0",
 doi="10.1007/978-3-642-37632-0_2",
 url="https://doi.org/10.1007/978-3-642-37632-0_2"
@@ -636,3 +603,284 @@ url="https://doi.org/10.1007/978-3-642-37632-0_2"
   doi     = {10.1167/jov.24.10.470},
   url     = {https://doi.org/10.1167/jov.24.10.470}
 }
+
+@article{Bragin1995Gamma,
+	author    = {Bragin, A. and Jand{\'o}, G. and N{\'a}dasdy, Z. and Hetke, J. and Wise, K. and Buzs{\'a}ki, G.},
+	title     = {Gamma (40--100 Hz) oscillation in the hippocampus of the behaving rat},
+	journal   = {Journal of Neuroscience},
+	year      = {1995},
+	volume    = {15},
+	number    = {1 Pt 1},
+	pages     = {47--60},
+	month     = jan,
+	doi       = {10.1523/JNEUROSCI.15-01-00047.1995},
+	pmid      = {7823151},
+	pmcid     = {PMC6578273}
+}
+
+
+@article{Mo_competing_2019,
+	title = {Competing rhythmic neural representations of orientations during concurrent attention to multiple orientation features},
+	author = {Mo, C. and Lu, J. and Wu B. and Jua J. and Luo H. and Fang F.},
+	year = {2019},
+	language = {en},
+	file = {PDF:/Users/chardiol/Zotero/storage/F42HYNIB/Competing rhythmic neural representations of orientations during concurrent attention to multiple or.pdf:application/pdf},
+}
+
+@article{klimesch_frequency_2018,
+	title = {The frequency architecture of brain and brain body oscillations: an analysis},
+	volume = {48},
+	issn = {0953-816X, 1460-9568},
+	shorttitle = {The frequency architecture of brain and brain body oscillations},
+	url = {https://onlinelibrary.wiley.com/doi/10.1111/ejn.14192},
+	doi = {10.1111/ejn.14192},
+	language = {en},
+	number = {7},
+	urldate = {2026-07-26},
+	journal = {European Journal of Neuroscience},
+	author = {Klimesch, Wolfgang},
+	month = oct,
+	year = {2018},
+	pages = {2431--2453},
+	file = {PDF:/Users/chardiol/Zotero/storage/E37KAZ2K/Klimesch - 2018 - The frequency architecture of brain and brain body oscillations an analysis.pdf:application/pdf},
+}
+
+@article{fan_relation_2007,
+	title = {The {Relation} of {Brain} {Oscillations} to {Attentional} {Networks}},
+	volume = {27},
+	issn = {0270-6474, 1529-2401},
+	url = {https://www.jneurosci.org/lookup/doi/10.1523/JNEUROSCI.1833-07.2007},
+	doi = {10.1523/JNEUROSCI.1833-07.2007},
+	language = {en},
+	number = {23},
+	urldate = {2026-07-26},
+	journal = {Journal of Neuroscience},
+	author = {Fan, J. and Byrne, J. and Worden, M. S. and Guise, K. G. and McCandliss, B. D. and Fossella, J. and Posner, M. I.},
+	month = jun,
+	year = {2007},
+	pages = {6197--6206},
+	file = {PDF:/Users/chardiol/Zotero/storage/K4Q4LTW8/Fan et al. - 2007 - The Relation of Brain Oscillations to Attentional Networks.pdf:application/pdf},
+}
+
+@article{esghaei_dynamic_2022,
+	title = {Dynamic coupling of oscillatory neural activity and its roles in visual attention},
+	volume = {45},
+	issn = {01662236},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0166223622000157},
+	doi = {10.1016/j.tins.2022.01.003},
+	language = {en},
+	number = {4},
+	urldate = {2026-07-26},
+	journal = {Trends in Neurosciences},
+	author = {Esghaei, Moein and Treue, Stefan and Vidyasagar, Trichur R.},
+	month = apr,
+	year = {2022},
+	pages = {323--335},
+	file = {PDF:/Users/chardiol/Zotero/storage/2U2IW2BD/Esghaei et al. - 2022 - Dynamic coupling of oscillatory neural activity and its roles in visual attention.pdf:application/pdf},
+}
+
+@article{yang_neural_2024,
+	title = {The neural oscillations in delta- and theta-bands contribute to divided attention in audiovisual integration},
+	volume = {53},
+	issn = {0301-0066, 1468-4233},
+	url = {https://journals.sagepub.com/doi/10.1177/03010066231208539},
+	doi = {10.1177/03010066231208539},
+	language = {en},
+	number = {1},
+	urldate = {2026-07-26},
+	journal = {Perception},
+	author = {Yang, Xi and Ying, Chen and Zhu, Lan and Wenjing, Wang},
+	month = jan,
+	year = {2024},
+	pages = {44--60},
+	file = {PDF:/Users/chardiol/Zotero/storage/PLUP959G/Yang et al. - 2024 - The neural oscillations in delta- and theta-bands contribute to divided attention in audiovisual int.pdf:application/pdf},
+}
+
+@article{spyropoulos_theta_2018,
+	title = {A theta rhythm in macaque visual cortex and its attentional modulation},
+	volume = {115},
+	issn = {0027-8424, 1091-6490},
+	url = {https://pnas.org/doi/full/10.1073/pnas.1719433115},
+	doi = {10.1073/pnas.1719433115},
+	language = {en},
+	number = {24},
+	urldate = {2026-07-26},
+	journal = {Proceedings of the National Academy of Sciences},
+	author = {Spyropoulos, Georgios and Bosman, Conrado Arturo and Fries, Pascal},
+	month = jun,
+	year = {2018},
+	file = {PDF:/Users/chardiol/Zotero/storage/9TDNWJET/Spyropoulos et al. - 2018 - A theta rhythm in macaque visual cortex and its attentional modulation.pdf:application/pdf},
+}
+
+@article{canolty_high_2006,
+	title = {High {Gamma} {Power} {Is} {Phase}-{Locked} to {Theta} {Oscillations} in {Human} {Neocortex}},
+	volume = {313},
+	issn = {0036-8075, 1095-9203},
+	url = {https://www.science.org/doi/10.1126/science.1128115},
+	doi = {10.1126/science.1128115},
+	language = {en},
+	number = {5793},
+	urldate = {2026-07-26},
+	journal = {Science},
+	author = {Canolty, R. T. and Edwards, E. and Dalal, S. S. and Soltani, M. and Nagarajan, S. S. and Kirsch, H. E. and Berger, M. S. and Barbaro, N. M. and Knight, R. T.},
+	month = sep,
+	year = {2006},
+	pages = {1626--1628},
+	file = {PDF:/Users/chardiol/Zotero/storage/6GKBTCXG/Canolty et al. - 2006 - High Gamma Power Is Phase-Locked to Theta Oscillations in Human Neocortex.pdf:application/pdf},
+}
+
+@misc{kawashima_attentional_2022,
+	title = {Attentional rhythmic blink: {Theta}/{Alpha} balance in neural oscillations determines the rhythmicity in visual sampling},
+	shorttitle = {Attentional rhythmic blink},
+	url = {http://biorxiv.org/lookup/doi/10.1101/2022.04.15.488436},
+	doi = {10.1101/2022.04.15.488436},
+	language = {en},
+	urldate = {2026-07-26},
+	publisher = {Neuroscience},
+	author = {Kawashima, Tomoya and Hayashi, Masamichi J and Amano, Kaoru},
+	month = apr,
+	year = {2022},
+	file = {PDF:/Users/chardiol/Zotero/storage/HT4IVP3E/Kawashima et al. - 2022 - Attentional rhythmic blink ThetaAlpha balance in neural oscillations determines the rhythmicity in.pdf:application/pdf},
+}
+
+@inproceedings{wang_attention_2022,
+	address = {Jilin China},
+	title = {Attention {Modulates} the {Neural} {Oscillation} of {Theta} {Frequency} in {Audiovisual} {Integration}},
+	isbn = {978-1-4503-9629-5},
+	url = {https://dl.acm.org/doi/10.1145/3546000.3546025},
+	doi = {10.1145/3546000.3546025},
+	language = {en},
+	urldate = {2026-07-26},
+	booktitle = {Proceedings of the 6th {International} {Conference} on {High} {Performance} {Compilation}, {Computing} and {Communications}},
+	publisher = {ACM},
+	author = {Wang, Wenjing and Liu, Guoao and Xi, Yang},
+	month = jun,
+	year = {2022},
+	pages = {163--167},
+	file = {PDF:/Users/chardiol/Zotero/storage/JSJR795U/Wang et al. - 2022 - Attention Modulates the Neural Oscillation of Theta Frequency in Audiovisual Integration.pdf:application/pdf},
+}
+
+@article{tan_theta_2024,
+	title = {Theta activity and cognitive functioning: {Integrating} evidence from resting-state and task-related developmental electroencephalography ({EEG}) research},
+	volume = {67},
+	issn = {18789293},
+	shorttitle = {Theta activity and cognitive functioning},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1878929324000653},
+	doi = {10.1016/j.dcn.2024.101404},
+	language = {en},
+	urldate = {2026-07-26},
+	journal = {Developmental Cognitive Neuroscience},
+	author = {Tan, Enda and Troller-Renfree, Sonya V. and Morales, Santiago and Buzzell, George A. and McSweeney, Marco and Antúnez, Martín and Fox, Nathan A.},
+	month = jun,
+	year = {2024},
+	pages = {101404},
+	file = {PDF:/Users/chardiol/Zotero/storage/I27TBHYB/Tan et al. - 2024 - Theta activity and cognitive functioning Integrating evidence from resting-state and task-related d.pdf:application/pdf},
+}
+
+@article{harris2026-cn,
+	title     = "Nested spatiotemporal theta-gamma waves organize hierarchical
+	processing across the mouse visual cortex",
+	author    = "Harris, Brendan and Gong, Pulin",
+	journal   = "Nat. Commun.",
+	publisher = "Springer Science and Business Media LLC",
+	volume    =  17,
+	number    =  1,
+	month     =  jan,
+	year      =  2026,
+	copyright = "https://creativecommons.org/licenses/by-nc-nd/4.0",
+	language  = "en"
+}
+
+
+@article{ursino_thetagamma_2024,
+	title = {Theta–gamma coupling as a ubiquitous brain mechanism: implications for memory, attention, dreaming, imagination, and consciousness},
+	volume = {59},
+	issn = {23521546},
+	shorttitle = {Theta–gamma coupling as a ubiquitous brain mechanism},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S2352154624000846},
+	doi = {10.1016/j.cobeha.2024.101433},
+	language = {en},
+	urldate = {2026-07-27},
+	journal = {Current Opinion in Behavioral Sciences},
+	author = {Ursino, Mauro and Pirazzini, Gabriele},
+	month = oct,
+	year = {2024},
+	pages = {101433},
+	file = {PDF:/Users/chardiol/Zotero/storage/KC3RF553/Ursino and Pirazzini - 2024 - Theta–gamma coupling as a ubiquitous brain mechanism implications for memory, attention, dreaming,.pdf:application/pdf},
+}
+
+@article{brooks_thetagamma_2020,
+	title = {Theta–gamma coupling and ordering information: a stable brain–behavior relationship across cognitive tasks and clinical conditions},
+	volume = {45},
+	issn = {0893-133X, 1740-634X},
+	shorttitle = {Theta–gamma coupling and ordering information},
+	url = {https://www.nature.com/articles/s41386-020-0759-z},
+	doi = {10.1038/s41386-020-0759-z},
+	language = {en},
+	number = {12},
+	urldate = {2026-07-27},
+	journal = {Neuropsychopharmacology},
+	author = {Brooks, Heather and Goodman, Michelle S. and Bowie, Christopher R. and Zomorrodi, Reza and Blumberger, Daniel M. and Butters, Meryl A. and Daskalakis, Zafiris J. and Fischer, Corinne E. and Flint, Alastair and Herrmann, Nathan and Kumar, Sanjeev and Mah, Linda and Mulsant, Benoit H. and Pollock, Bruce G. and Voineskos, Aristotle N. and Rajji, Tarek K. and {on behalf of the PACt-MD Study Group} and Mulsant, Benoit H. and Rajji, Tarek K. and Herrmann, Nathan and Pollock, Bruce G. and Lourenco, Lillian and Blumberger, Daniel M. and Bowie, Christopher R. and Butters, Meryl A. and Fischer, Corinne E. and Flint, Alastair and Gallagher, Damien and Golas, Angela and Graff, Ariel and Kennedy, James L. and Kumar, Sanjeev and Mah, Linda and Ovaysikia, Shima and Rapoport, Mark and Thorpe, Kevin E. and Verhoeff, Nicolaas P. L. G. and Voineskos, Aristotle N.},
+	month = nov,
+	year = {2020},
+	pages = {2038--2047},
+	file = {PDF:/Users/chardiol/Zotero/storage/I4P5HMIN/Brooks et al. - 2020 - Theta–gamma coupling and ordering information a stable brain–behavior relationship across cognitive.pdf:application/pdf},
+}
+
+@article{tort_thetagamma_2009,
+	title = {Theta–gamma coupling increases during the learning of item–context associations},
+	volume = {106},
+	issn = {0027-8424, 1091-6490},
+	url = {https://pnas.org/doi/full/10.1073/pnas.0911331106},
+	doi = {10.1073/pnas.0911331106},
+	abstract = {Phase-amplitude cross-frequency coupling (CFC) between theta (4–12 Hz) and gamma (30–100 Hz) oscillations occurs frequently in the hippocampus. However, it still remains unclear whether theta–gamma coupling has any functional significance. To address this issue, we studied CFC in local field potential oscillations recorded from the CA3 region of the dorsal hippocampus of rats as they learned to associate items with their spatial context. During the course of learning, the amplitude of the low gamma subband (30–60 Hz) became more strongly modulated by theta phase in CA3, and higher levels of theta–gamma modulation were maintained throughout overtraining sessions. Furthermore, the strength of theta–gamma coupling was directly correlated with the increase in performance accuracy during learning sessions. These findings suggest a role for hippocampal theta–gamma coupling in memory recall.},
+	language = {en},
+	number = {49},
+	urldate = {2026-07-27},
+	journal = {Proceedings of the National Academy of Sciences},
+	author = {Tort, Adriano B. L. and Komorowski, Robert W. and Manns, Joseph R. and Kopell, Nancy J. and Eichenbaum, Howard},
+	month = dec,
+	year = {2009},
+	pages = {20942--20947},
+	file = {PDF:/Users/chardiol/Zotero/storage/E66C68K7/Tort et al. - 2009 - Theta–gamma coupling increases during the learning of item–context associations.pdf:application/pdf},
+}
+
+@article{soulier2022-ge,
+	title    = "The tail process and tail measure of continuous time regularly
+	varying stochastic processes",
+	author   = "Soulier, Philippe",
+	abstract = "The goal of this paper is to investigate the tools of extreme
+	value theory originally introduced for discrete time stationary
+	stochastic processes (time series), namely the tail process and
+	the tail measure, in the framework of continuous time stochastic
+	processes with paths in the space $\mathcal \{D\}$of
+	c{\`a}dl{\`a}g functions indexed by $\mathbb \{R\}$, endowed with
+	Skorohod's J1 topology. We prove that the essential properties of
+	these objects are preserved, with some minor (though interesting)
+	differences arising. We first obtain structural results which
+	provide representation for homogeneous shift-invariant measures
+	on $\mathcal \{D\}$and then study regular variation of random
+	elements in $\mathcal \{D\}$. We give practical conditions and
+	study several examples, recovering and extending known results.",
+	journal  = "Extremes",
+	volume   =  25,
+	number   =  1,
+	pages    = "107--173",
+	month    =  mar,
+	year     =  2022
+}
+
+@Inbook{Borkar1995,
+	author="Borkar, Vivek S.",
+	title="Foundations of Continuous-Time Processes",
+	bookTitle="Probability Theory: An Advanced Course",
+	year="1995",
+	publisher="Springer New York",
+	address="New York, NY",
+	pages="109--129",
+	abstract="This chapter introduces some basics of continuous time stochastic processes, mainly those concerning their construction and sample path properties. A detailed study of these processes is a vast enterprise and is well beyond the scope of this book. For simplicity, we shall restrict to real-valued processes on the time interval [0,1], that is, a family X t of real random variables on some probability space, indexed by the time variable t ∈ [0,1]. Much of what we do below extends to arbitrary time intervals and more general (e.g. Polish space-valued) processes with minor modifications.",
+	isbn="978-1-4612-0791-7",
+	doi="10.1007/978-1-4612-0791-7_6",
+	url="https://doi.org/10.1007/978-1-4612-0791-7_6"
+}
+
