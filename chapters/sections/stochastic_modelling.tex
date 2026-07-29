@@ -1,8 +1,31 @@
 
 \section{Stochastic Modelling}\label{sec:stoch_modelling}
 Stochastic calculus has been fundamental in understanding how high dimensional complex systems reduce to a small number of variables of interest. When studying complex systems in physics, economics, geology, climate science, machine learning, and neuroscience, it is often the most natural, tractable, and accurate modelling choice when understanding a system of interest. The important concept here is that of the introduction of some central limit theorem, where the sum of very many small interactions which are understood microscopically can produce certain well-defined stochastic patterns on macroscopic scales of interest. The ubiquitous stochastic process is a Wiener process $W_t$, equivalently called Brownian Motion. A Wiener process is defined by the stationary and independent Gaussian increments across all non-overlapping time intervals. The Wiener process is a very simple and analytically elegant model of the coarse-grained effect of very many small finite-variance interacting influences. A Wiener process is defined only by its timescale, with a variance over trajectories after time $t$ of $t$ itself. Wiener processes yield time series which are almost surely continuous but nowhere differentiable. The Wiener process is understood as a model of the long-time dynamics of a variable effected by very many small uncorrelated finite variance influences \cite{hassler_stochastic_2016}. Classical examples of processes modelled by the Wiener process are: the movement of a macroscopic particle in a non-turbulent fluid \cite{hassler_stochastic_2016}, the gravitational influence of an orbiting thermal collection of stars on supermassive black holes \cite{Chandrasekhar1943, Merritt2007a}, and (arguably) the movement of low-volatility stock prices \cite{cunchala2024basicoverviewvariousstochastic}. There are well studied mechanisms through which complex real-world stochastic processes diverge from the Wiener process. Of interest to us is the case where the microscopic effects become correlated with heavy-tailed statistics. Correlated steps, long-time memory effects, and microscopic dynamics can result in a stochastic process which does not limit to the Wiener process \cite{Brevitt2025, Klages2013}. Of interest to us is the fractional and superdiffusive Lévy flight, which is a result of spatial non-locality in an interacting network. For instance, previous studies have demonstrated a neural circuit network at criticality resulting in diverging correlation length of activity, and the centre of mass of neural firing is subject to the large jumps. Such large jumps in a stochastic time series are modelled according to Lévy stable motion, where the increments are drawn independently from a heavy-tailed distribution. This section describes the analytics and behaviour of such Lévy processes for our current study.
+
+
+\subsection{Anomalous Diffusion}\label{subsec:anom_diff}
+Simulating trajectories from stochastic processes such as Wiener processes and Lévy flights are computationally direct, it is often useful to understand the dynamics of the distribution of trajectories after some time $t$. The dynamics of the distribution of trajectories driven by a stochastic differential equation is defined through the Fokker-Planck Equation (FPE), also known as the Kolmogorov Forward Equation. The paradigmatic FPE is given for the Langevin Equation:
+\begin{equation}
+	dX_t = \mu(X_t,t)dt + \sigma(X_t,t) dW_t
+\end{equation}
+giving the partial differential equation for the distribution $p(x,t)$ of $X_t$:
+\begin{equation}
+	\frac{\partial p(x,t)}{\partial t} = - \frac{\partial}{\partial x} [ \mu(x, t)p(x,t) ] + \frac{1}{2} \frac{\partial^2}{\partial x^2}[\sigma^2(x,t)p(x,t)]
+\end{equation}
+In the case where $\mu(x,t) = 0$ and $\sigma(x,t) = \sigma$, the Langevin FPE simplifies into the standard heat equation, with diffusion of the probability mass with a rate defined by the volatility parameter $\sigma$:
+\begin{equation}
+	\frac{\partial p(x,t)}{\partial t} = \frac{\sigma^2}{2} \nabla^2 p(x,t)
+\end{equation}
+The heat equation is very well studied, and given an initial condition concentrated at the point $(x,t) = (x_0,0)$, the distribution at any time $t>0$ is exactly a Gaussian defined by:
+
+\begin{equation}
+	p(x,t) = \frac{1}{(2 \pi \sigma^2 t)^{1/2}} \exp \left( - \frac{|x|^2}{2 \sigma^2 t} \right)
+\end{equation}
+
+We see from this that the variance of such a distribution will scale as $\textbf{Var}_x[p(x,t)] \propto t$
+
 \subsection{Lévy Stable Motion}\label{subsec:levy_motion}
-The literature is often unclear when distinguishing stochastic processes of a heavy-tailed nature. However, for our purposes, we analyse what is often called the \textit{Lévy flight} $L_T^{\alpha}$, a Stochastic process defined through the increments being drawn from the heavy tailed symmetric $\alpha$ stable distribution (a $\mathcal{S}\alpha\mathcal{S}$ distribution). $\mathcal{S}\alpha\mathcal{S}$ distributions are a family of limiting stable distribution under summation of i.i.d infinite-variance variables, as a result of the generalised central limit theorem. The $\alpha$ value defining the particular $\mathcal{S}\alpha\mathcal{S}$ distribution defines the asymptotic tail of the probability density function, with $p(x) \propto |x|^{1-\alpha}$. Thus, the Lévy flight $L_t^{\alpha}$ after time $t$ is defined as follows, to outline the fractional scaling properties and alpha-stable statistics
+The literature is often unclear when distinguishing stochastic processes of a heavy-tailed nature. However, for our purposes, we analyse what is often called the \textit{Lévy flight} $L_T^{\alpha}$, a Stochastic process defined through the increments being drawn from the heavy tailed symmetric $\alpha$ stable distribution (a $\mathcal{S}\alpha\mathcal{S}$ distribution). $\mathcal{S}\alpha\mathcal{S}$ distributions are a family of limiting stable distribution under summation of i.i.d infinite-variance variables, as a result of the generalised central limit theorem. The $\alpha$ value defining the particular $\mathcal{S}\alpha\mathcal{S}$ distribution defines the asymptotic tail of the probability density function, with $p(x) \propto |x|^{-1-\alpha}$. Thus, the Lévy flight $L_t^{\alpha}$ after time $t$ is defined as follows, to outline the fractional scaling properties and alpha-stable statistics
 \begin{equation}
 	L_t \stackrel{d}{=} t^{1/\alpha} L_1, \ \ L_1 \sim \mathcal{S}\alpha\mathcal{S}
 \end{equation}
@@ -12,6 +35,3 @@ where the parameter $\alpha$ defines the heaviness of the tails of resulting sta
 	\item A square-integrable martingale jump process with $|\Delta x| < 1$. This process is thus finite-variance, and when coarse-grained over time, approaches a Wiener process.
 \end{enumerate}
 This division is useful in analysing the process in the context of stochastic nonlocal global exploration, which is modelled by the compound Poisson process of large jumps $|\Delta x| > 1$, and the local exploitation dynamics modelled by the square-integrable martingale of small jumps $|\Delta x| < 1$.
-
-\subsection{Anomalous Diffusion}\label{subsec:anom_diff}
-Simulating trajectories from stochastic processes such as Wiener processes and Lévy flights are computationally direct, it is often useful to understand the dynamics of the distribution of trajectories after some time $t$.
