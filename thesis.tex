@@ -35,23 +35,26 @@
 	
 	\include{frontmatter/abstract}
 	\include{frontmatter/acknowledgments}
+
 	
 	%-------------- Table of contents
 	\cleardoublepage
 	\phantomsection \pdfbookmark[0]{Contents}{Contents} 
 	\tableofcontents
-	\addcontentsline{toc}{chapter}{\listfigurename}
-	\listoffigures
-	\addcontentsline{toc}{chapter}{\listtablename}
-	\listoftables
+%	\addcontentsline{toc}{chapter}{\listfigurename}
+%	\listoffigures
+%	\addcontentsline{toc}{chapter}{\listtablename}
+%	\listoftables
+
+	%-------------- Introduction
+	\cleardoublepage
+	\mainmatter
+	\include{introduction/introduction}
 	
 	%\include{frontmatter/nomenclature}
 	%\printnomenclature
 	
 	%-------------- Chapters
-	\cleardoublepage
-	\mainmatter
-    \include{chapters/introduction}
 	\include{chapters/chapter1}
 	% \include{chapters/chapter2}
 	
