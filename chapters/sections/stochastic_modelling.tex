@@ -11,27 +11,29 @@ where $D$ is a scaling constant. Fick shows that this gives a mean squared displ
 \begin{equation}
     \langle x(t) ^2 \rangle \propto t^{\beta}, \ \ \beta \neq 1
 \end{equation}
-Such anomalous diffusion yields two cases, subdiffusion $0 < \beta < 1$ where diffusion scales slower than normal, and superdiffusion $1 < \beta < 2$ where diffusion scales faster than normal. The case of $\beta = 2$ is known as ballistic diffusion, as it is found in the deterministic case of unchanging velocity $x = vt$. [THE CASE OF SUBDIFFUSION IN FLUID FLOW, ETC]. Superdiffusion has been studied in the contexts of complex biological systems, especially in the context of searching for scarce resources. The hypothesis that a superdiffusive CTRW (known as a Lévy walk) is an optimal strategy when searching for sparse and randomly distributed resources has been well studied. This result, known as the Lévy foraging hypothesis, was first reported in a letter to the journal Nature in 1999 by Viswanathan et. al finding optimal searching in a simulated sparse environment for a Lévy walk on the phase transition between superdiffusion and ballistic diffusion. The optimality of the superdiffusive Lévy walk has been reproduced in diverse functional search models, in a population of searching agent, and in the empirical search paths of biological organisms. Importantly, these studies underline the robustness of the scale-free nature of Lévy walk superdiffusion, as a baseline uninformed strategy which performs optimally across many sparse environments. Increasingly there are studies which describe flaws in the Lévy foraging hypothesis, and call for a return to more sophisticated ecological methods to describe biological organisms. This marks a split in the treatment of Lévy walks, with groups studying them as informative baseline functional models of abstract search, and others see them as reductionist misrepresentation of true intelligent organisms (see REYNOLDS)
+Such anomalous diffusion yields two cases, subdiffusion $0 < \beta < 1$ where diffusion scales slower than normal, and superdiffusion $1 < \beta < 2$ where diffusion scales faster than normal. The case of $\beta = 2$ is known as ballistic diffusion, as it is found in the deterministic case of constant velocity $x = vt$. Anomalous subdiffusion has been found in cases of trapped fluid flow, controlled diffusion through cell membranes, and protein mixing \cite{Kou2004-kz}. \\
 
-Simulating trajectories from stochastic processes such as Wiener processes and Lévy flights are computationally direct, it is often useful to understand the dynamics of the distribution of trajectories after some time $t$. The dynamics of the distribution of trajectories driven by a stochastic differential equation is defined through the Fokker-Planck Equation (FPE), also known as the Kolmogorov Forward Equation. The paradigmatic FPE is given for the Langevin Equation:
-\begin{equation}
-	dX_t = \mu(X_t,t)dt + \sigma(X_t,t) dW_t
-\end{equation}
-giving the partial differential equation for the distribution $p(x,t)$ of $X_t$:
-\begin{equation}
-	\frac{\partial p(x,t)}{\partial t} = - \frac{\partial}{\partial x} [ \mu(x, t)p(x,t) ] + \frac{1}{2} \frac{\partial^2}{\partial x^2}[\sigma^2(x,t)p(x,t)]
-\end{equation}
-In the case where $\mu(x,t) = 0$ and $\sigma(x,t) = \sigma$, the Langevin FPE simplifies into the standard heat equation, with diffusion of the probability mass with a rate defined by the volatility parameter $\sigma$:
-\begin{equation}
-	\frac{\partial p(x,t)}{\partial t} = \frac{\sigma^2}{2} \nabla^2 p(x,t)
-\end{equation}
-The heat equation is very well studied, and given an initial condition concentrated at the point $(x,t) = (x_0,0)$, the distribution at any time $t>0$ is exactly a Gaussian defined by:
+Superdiffusion has been studied in the contexts of complex biological systems, especially in the context of searching for scarce resources. The hypothesis that a superdiffusive CTRW (known as a Lévy walk) is an optimal strategy when searching for sparse and randomly distributed resources has been well studied. This result, known as the Lévy foraging hypothesis, was first reported in a letter to the journal Nature in 1999 by Viswanathan et.~al finding optimal searching in a simulated sparse environment for a Lévy walk on the phase transition between superdiffusion and ballistic diffusion \cite{viswanathan_optimizing_1999}. The optimality of the superdiffusive Lévy walk has been reproduced in diverse functional search models, in a population of searching agent, and in the empirical search paths of biological organisms, from drosophilia flies flights \cite{sims_optimal_2019, reynolds_free-flight_2007}, albatross' searches \cite{focardi_levy_2014, humphries_new_2013}, and strongly across many marine predators \cite{sims_scaling_2008, humphries_environmental_2010}. Increasingly there are studies which describe biological limitations of the Lévy foraging hypothesis, however the Lévy computational advantage in a diverse set of resource landscapes without the need for fine-tuning remains strong \cite{humphries_optimal_2014, campeau_evolutionary_2022}. This marks a split in the treatment of Lévy walks, with groups studying them as informative baseline functional models of abstract search \cite{viswanathan_optimizing_1999, gautestad_levy_2013, humphries_optimal_2014, clementi_search_2021}, and others led by authors such as Graham Pyke presenting this as a misrepresentation of true intelligent organisms \cite{pyke_levy_2026, pyke_understanding_2015, benhamou_ultimate_2015}, see Reynolds (2015) for an in-depth discussion of a richer view of biological Lévy walk superdiffusion \cite{reynolds_liberating_2015}.\\
 
-\begin{equation}
-	p(x,t) = \frac{1}{(2 \pi \sigma^2 t)^{1/2}} \exp \left( - \frac{|x|^2}{2 \sigma^2 t} \right)
-\end{equation}
+% Simulating trajectories from stochastic processes such as Wiener processes and Lévy flights are computationally direct, it is often useful to understand the dynamics of the distribution of trajectories after some time $t$. The dynamics of the distribution of trajectories driven by a stochastic differential equation is defined through the Fokker-Planck Equation (FPE), also known as the Kolmogorov Forward Equation. The paradigmatic FPE is given for the Langevin Equation:
+% \begin{equation}
+% 	dX_t = \mu(X_t,t)dt + \sigma(X_t,t) dW_t
+% \end{equation}
+% giving the partial differential equation for the distribution $p(x,t)$ of $X_t$:
+% \begin{equation}
+% 	\frac{\partial p(x,t)}{\partial t} = - \frac{\partial}{\partial x} [ \mu(x, t)p(x,t) ] + \frac{1}{2} \frac{\partial^2}{\partial x^2}[\sigma^2(x,t)p(x,t)]
+% \end{equation}
+% In the case where $\mu(x,t) = 0$ and $\sigma(x,t) = \sigma$, the Langevin FPE simplifies into the standard heat equation, with diffusion of the probability mass with a rate defined by the volatility parameter $\sigma$:
+% \begin{equation}
+% 	\frac{\partial p(x,t)}{\partial t} = \frac{\sigma^2}{2} \nabla^2 p(x,t)
+% \end{equation}
+% The heat equation is very well studied, and given an initial condition concentrated at the point $(x,t) = (x_0,0)$, the distribution at any time $t>0$ is exactly a Gaussian defined by:
 
-We see from this that the variance of such a distribution will scale as $\textbf{Var}_x[p(x,t)] \propto t$
+% \begin{equation}
+% 	p(x,t) = \frac{1}{(2 \pi \sigma^2 t)^{1/2}} \exp \left( - \frac{|x|^2}{2 \sigma^2 t} \right)
+% \end{equation}
+
+% We see from this that the variance of such a distribution will scale as $\textbf{Var}_x[p(x,t)] \propto t$
 
 \subsection{Lévy Stable Motion}\label{subsec:levy_motion}
 The literature is often unclear when distinguishing stochastic processes of a heavy-tailed nature. However, for our purposes, we analyse what is often called the \textit{Lévy flight} $L_T^{\alpha}$, a Stochastic process defined through the increments being drawn from the heavy tailed symmetric $\alpha$ stable distribution (a $\mathcal{S}\alpha\mathcal{S}$ distribution). $\mathcal{S}\alpha\mathcal{S}$ distributions are a family of limiting stable distribution under summation of i.i.d infinite-variance variables, as a result of the generalised central limit theorem. The $\alpha$ value defining the particular $\mathcal{S}\alpha\mathcal{S}$ distribution defines the asymptotic tail of the probability density function, with $p(x) \propto |x|^{-1-\alpha}$. Thus, the Lévy flight $L_t^{\alpha}$ after time $t$ is defined as follows, to outline the fractional scaling properties and alpha-stable statistics
