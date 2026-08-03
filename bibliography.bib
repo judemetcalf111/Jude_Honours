@@ -13,10 +13,11 @@ OPTannote = {•}
 }
 
 @article{dong_neural_nodate,
-    title = {Neural {Sampling} in {Hierarchical} {Exponential}-family {Energy}-based {Models}},
-    abstract = {Bayesian brain theory suggests that the brain employs generative models to understand the external world. The sampling-based perspective posits that the brain infers the posterior distribution through samples of stochastic neuronal responses. Additionally, the brain continually updates its generative model to approach the true distribution of the external world. In this study, we introduce the Hierarchical Exponential-family Energy-based (HEE) model, which captures the dynamics of inference and learning. In the HEE model, we decompose the partition function into individual layers and leverage a group of neurons with shorter time constants to sample the gradient of the decomposed normalization term. This allows our model to estimate the partition function and perform inference simultaneously, circumventing the negative phase encountered in conventional energy-based models (EBMs). As a result, the learning process is localized both in time and space, and the model is easy to converge. To match the brain’s rapid computation, we demonstrate that neural adaptation can serve as a momentum term, significantly accelerating the inference process. On natural image datasets, our model exhibits representations akin to those observed in the biological visual system. Furthermore, for the machine learning community, our model can generate observations through joint or marginal generation. We show that marginal generation outperforms joint generation and achieves performance on par with other EBMs.},
-    language = {en},
-    author = {Dong, Xingsi and Wu, Si},
+title={Neural Sampling in Hierarchical Exponential-family Energy-based Models},
+author={Xingsi Dong and Si Wu},
+journal={Thirty-seventh Conference on Neural Information Processing Systems},
+year={2023},
+url={https://openreview.net/forum?id=SWU8YLlFVH}
 }
 
 @article{terada_chaotic_2024,
@@ -1774,4 +1775,112 @@ Conclusion: A statistical mechanical model architecture that describes foraging 
 	abstract = {One of the most inﬂuential, and controversial, ideas in neuroscience has been to understand the brain in terms of Bayesian computations. Unstated diﬀerences in how Bayesian ideas are operationalized across diﬀerent models make it diﬃcult to ascertain both which empirical data support which models, and how Bayesian computations might be implemented by neural circuits. In this paper, we make one such diﬀerence explicit by identifying two distinct philosophies that underlie existing neural models of Bayesian inference: one in which the brain recovers experimenter-deﬁned structures in the world from sensory neural activity (Decoding), and another in which the brain represents latent quantities in an internal model that explains its inputs (Encoding). These philosophies require profoundly diﬀerent assumptions about the nature of inference in the brain, and lead to diﬀerent interpretations of empirical data. Here, we characterize and contrast both philosophies in terms of motivations, empirical support, and relationship to neural data. We also show that this implicit diﬀerence in philosophy underlies some of the debate on whether neural activity is better described as a sampling-based, or a parametric, distributional code. Using a simple model of primary visual cortex as an example, we show mathematically that it is possible that the very same neural activity can be described as probabilistic inference by neural sampling in the Encoding framework while also forming a linear probabilistic population code (PPC) in the Decoding framework. This demonstrates that certain families of Encoding and Decoding models are compatible with each other rather than competing explanations of data. In sum, Bayesian Encoding and Bayesian Decoding are distinct, non-exclusive philosophies, and appreciating their similarities and diﬀerences will help organize future work and allow for stronger empirical tests about the nature of inference in the brain.},
 	language = {en},
 	author = {Lange, Richard D and Shivkumar, Sabyasachi and Chattoraj, Ankani and Haefner, Ralf M},
+}
+
+@article{bowers_bayesian_2012,
+    title = {Bayesian just-so stories in psychology and neuroscience.},
+    volume = {138},
+    issn = {1939-1455, 0033-2909},
+    url = {https://doi.apa.org/doi/10.1037/a0026450},
+    doi = {10.1037/a0026450},
+    abstract = {According to Bayesian theories in psychology and neuroscience, minds and brains are (near) optimal in solving a wide range of tasks. We challenge this view and argue that more traditional, non-Bayesian approaches are more promising. We make 3 main arguments. First, we show that the empirical evidence for Bayesian theories in psychology is weak. This weakness relates to the many arbitrary ways that priors, likelihoods, and utility functions can be altered in order to account for the data that are obtained, making the models unfalsifiable. It further relates to the fact that Bayesian theories are rarely better at predicting data compared with alternative (and simpler) non-Bayesian theories. Second, we show that the empirical evidence for Bayesian theories in neuroscience is weaker still. There are impressive mathematical analyses showing how populations of neurons could compute in a Bayesian manner but little or no evidence that they do. Third, we challenge the general scientific approach that characterizes Bayesian theorizing in cognitive science. A common premise is that theories in psychology should largely be constrained by a rational analysis of what the mind ought to do. We question this claim and argue that many of the important constraints come from biological, evolutionary, and processing (algorithmic) considerations that have no adaptive relevance to the problem per se. In our view, these factors have contributed to the development of many Bayesian “just so” stories in psychology and neuroscience; that is, mathematical analyses of cognition that can be used to explain almost any behavior as optimal.},
+    language = {en},
+    number = {3},
+    urldate = {2026-08-03},
+    journal = {Psychological Bulletin},
+    author = {Bowers, Jeffrey S. and Davis, Colin J.},
+    year = {2012},
+    pages = {389--414},
+}
+
+@article{Renninger2005-ee,
+  title    = "An information maximization model of eye movements",
+  author   = "Renninger, Laura Walker and Coughlan, James and Verghese, Preeti
+              and Malik, Jitendra",
+  abstract = "We propose a sequential information maximization model as a
+              general strategy for programming eye movements. The model
+              reconstructs high-resolution visual information from a sequence
+              of fixations, taking into account the fall-off in resolution from
+              the fovea to the periphery. From this framework we get a simple
+              rule for predicting fixation sequences: after each fixation,
+              fixate next at the location that minimizes uncertainty (maximizes
+              information) about the stimulus. By comparing our model
+              performance to human eye movement data and to predictions from a
+              saliency and random model, we demonstrate that our model is best
+              at predicting fixation locations. Modeling additional biological
+              constraints will improve the prediction of fixation sequences.
+              Our results suggest that information maximization is a useful
+              principle for programming eye movements.",
+  journal  = "Adv. Neural Inf. Process. Syst.",
+  volume   =  17,
+  pages    = "1121--1128",
+  year     =  2005,
+  keywords = "NASA Discipline Neuroscience; Non-NASA Center",
+  language = "en"
+}
+
+@article{renninger_where_2007,
+    title = {Where to look next? {Eye} movements reduce local uncertainty},
+    volume = {7},
+    issn = {1534-7362},
+    shorttitle = {Where to look next?},
+    url = {http://jov.arvojournals.org/article.aspx?doi=10.1167/7.3.6},
+    doi = {10.1167/7.3.6},
+    abstract = {How do we decide where to look next? During natural, active vision, we move our eyes to gather task-relevant information from the visual scene. Information theory provides an elegant framework for investigating how visual stimulus information combines with prior knowledge and task goals to plan an eye movement. We measured eye movements as observers performed a shape-learning and -matching task, for which the task-relevant information was tightly controlled. Using computational models, we probe the underlying strategies used by observers when planning their next eye movement. One strategy is to move the eyes to locations that maximize the total information gained about the shape, which is equivalent to reducing global uncertainty. Observers’ behavior may appear highly similar to this strategy, but a rigorous analysis of sequential ﬁxation placement reveals that observers may instead be using a local rule: ﬁxate only the most informative locations, that is, reduce local uncertainty.},
+    language = {en},
+    number = {3},
+    urldate = {2026-08-03},
+    journal = {Journal of Vision},
+    author = {Renninger, Laura Walker and Verghese, Preeti and Coughlan, James},
+    month = feb,
+    year = {2007},
+    pages = {6},
+}
+@article{najemnik_optimal_2005,
+    title = {Optimal eye movement strategies in visual search},
+    language = {en},
+    author = {Najemnik, Jiri and Geisler, Wilson S},
+    year = {2005},
+}
+
+@article{Wedel_2023,
+    title={Modeling Eye Movements During Decision Making: A Review}, 
+    volume={88}, 
+    DOI={10.1007/s11336-022-09876-4}, 
+    number={2},
+    journal={Psychometrika}, 
+    author={Wedel, Michel and Pieters, Rik and van der Lans, Ralf}, 
+    year={2023}, 
+    pages={697–729}
+} 
+
+@article{Radulescu_2026,
+    author = {Radulescu, Angela and van Opheusden, Bas and Callaway, Frederick and Griffiths, Thomas L. and Hillis, James M.},
+    title = {A Resource-Rational Account of Human Eye Movements During Immersive Visual Search},
+    journal = {Open Mind},
+    volume = {10},
+    pages = {91-117},
+    year = {2026},
+    month = {02},
+    abstract = {The nature of eye movements during visual search has been widely studied in cognitive science. Virtual reality (VR) paradigms are an opportunity to test whether computational models of search can predict naturalistic search behavior. However, existing ideal observer models are constrained by strong assumptions about the structure of the world, rendering them impractical for modeling the complexity of environments which can be studied in VR. To address these limitations, we modeled immersive visual search as a reinforcement learning problem, in which sequential decisions are made over a multidimensional representation of the environment learned by a convolutional neural network. In our formulation, RL agents learned a policy over latent states—effectively solving what is known as a meta–Markov decision process (meta-MDP), where each decision concerns how to allocate attention to information in the environment. Training deep-RL agents on the meta-MDP showed that learned (i.e., optimal) search policies converge to a classic ideal-observer model of search developed for simple (1D) stimuli. We compared the learned resource-rational policy with human gaze data from a visual-search experiment conducted in VR and found qualitative and quantitative alignment between model predictions and human behavior. However, both the model’s simulated performance and its correspondence with human behavior depended strongly on the representational features available to the policy. These results suggest that naturalistic visual search behavior can partially be explained by resource-rational allocation of limited cognitive resources, and the choice of representation influences the degree of alignment between model and human behavior.},
+    issn = {2470-2986},
+    doi = {10.1162/OPMI.a.322},
+    url = {https://doi.org/10.1162/OPMI.a.322},
+    eprint = {https://direct.mit.edu/opmi/article-pdf/doi/10.1162/OPMI.a.322/2582247/opmi.a.322.pdf},
+}
+
+@article{ujfalussy_sampling_2022,
+    title = {Sampling motion trajectories during hippocampal theta sequences},
+    volume = {11},
+    issn = {2050-084X},
+    url = {https://elifesciences.org/articles/74058},
+    doi = {10.7554/eLife.74058},
+    abstract = {Efficient planning in complex environments requires that uncertainty associated with current inferences and possible consequences of forthcoming actions is represented. Representation of uncertainty has been established in sensory systems during simple perceptual decision making tasks but it remains unclear if complex cognitive computations such as planning and navigation are also supported by probabilistic neural representations. Here, we capitalized on gradually changing uncertainty along planned motion trajectories during hippocampal theta sequences to capture signatures of uncertainty representation in population responses. In contrast with prominent theories, we found no evidence of encoding parameters of probability distributions in the momentary population activity recorded in an open-­field navigation task in rats. Instead, uncertainty was encoded sequentially by sampling motion trajectories randomly and efficiently in subsequent theta cycles from the distribution of potential trajectories. Our analysis is the first to demonstrate that the hippocampus is well equipped to contribute to optimal planning by representing uncertainty.},
+    language = {en},
+    urldate = {2025-10-08},
+    journal = {eLife},
+    author = {Ujfalussy, Balazs B and Orbán, Gergő},
+    month = nov,
+    year = {2022},
+    pages = {e74058},
 }
